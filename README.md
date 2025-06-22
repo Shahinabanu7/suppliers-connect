@@ -68,7 +68,7 @@ Follow these steps to test the full order flow in the Supplier Connect App:
    - Open the app and go to the Login screen.
    - Enter the sample credentials:
      - Email: `admin@supplier.com`
-     - Password: `admin123`
+     - Password: `123456`
    - Tap the **Login** button.
 
 2. **View Suppliers**
