@@ -47,7 +47,7 @@ These are dummy credentials used for authentication via the `POST /login` API.
 ---
 
 ## 🔗 Live API URL (Hosted on AWS EC2)
-"http://3.122.45.88/supplierconnect"
+"http://13.60.206.177/supplierconnect"
 
 Your backend API is hosted on AWS EC2 and publicly accessible.
 
