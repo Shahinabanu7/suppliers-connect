@@ -7,18 +7,25 @@ import 'package:supplier_connect_app/model/supplier_model.dart';
 import 'package:supplier_connect_app/provider/cart_provider.dart';
 
 class AuthService {
-  final String apiUrl = 'http://13.60.206.177/supplierconnect';
+  final String apiUrl = 'http://ec2-13-60-206-177.eu-north-1.compute.amazonaws.com/supplierconnect';
 
   // Login function
-  Future<LoginResponse> login(String email, String password) async {
-    print("email: $email");
-    print("password: $password");
+ Future<LoginResponse> login(String email, String password) async {
+  print("email: $email");
+  print("password: $password");
+  print("API URL: $apiUrl/login.php");
 
+  try {
     final response = await http.post(
-      Uri.parse('$apiUrl/login.php'),
+      Uri.parse('http://ec2-13-60-206-177.eu-north-1.compute.amazonaws.com/supplierconnect/login.php'
+        //'$apiUrl/login.php'
+        ),
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({'email': email, 'password': password}),
     );
+
+    print("Status Code: ${response.statusCode}");
+    print("Response Body: ${response.body}");
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
@@ -40,7 +47,16 @@ class AuthService {
         message: 'Something went wrong. Please try again later.',
       );
     }
+  } catch (e) {
+    print(" Login Error: $e");
+    return LoginResponse(
+      status: false,
+      token: '',
+      message: 'Connection failed: $e',
+    );
   }
+}
+
 
   // Fetch suppliers
 
