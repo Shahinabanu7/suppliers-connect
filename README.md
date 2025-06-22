@@ -47,7 +47,7 @@ These are dummy credentials used for authentication via the `POST /login` API.
 ---
 
 ## 🔗 Live API URL (Hosted on AWS EC2)
-"http://ec2-13-60-206-177.eu-north-1.compute.amazonaws.com/supplierconnect"
+http://ec2-13-60-206-177.eu-north-1.compute.amazonaws.com/supplierconnect/
 
 Your backend API is hosted on AWS EC2 and publicly accessible.
 
@@ -99,4 +99,4 @@ Follow these steps to test the full order flow in the Supplier Connect App:
 
 ## 📲 APK Build
 You can download the working APK here: 
-[Download SumartSupply App APK] (https://drive.google.com/file/d/1it-ORZvmWmZIoGOiXL9JCeFJdsA6Sdh_/view?usp=sharing)
+[Download SumartSupply App APK] (https://drive.google.com/file/d/1RREokfKa-AMwM9UMxY5_kedTsHJhwZxF/view?usp=sharing)
